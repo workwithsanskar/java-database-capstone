@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f4efe7"/>
+  <rect x="60" y="50" width="1160" height="620" rx="32" fill="#ffffff" stroke="#d7ddd8"/>
+  <text x="110" y="120" font-family="Arial" font-size="20" fill="#0d7c66">Admin Portal</text>
+  <text x="110" y="175" font-family="Arial" font-size="38" font-weight="700" fill="#1f2a2e">Add Doctor</text>
+  <rect x="110" y="230" width="360" height="58" rx="14" fill="#f8faf9" stroke="#cad2cd"/>
+  <text x="135" y="266" font-family="Arial" font-size="20" fill="#617178">Dr. Kavya Rao</text>
+  <rect x="500" y="230" width="360" height="58" rx="14" fill="#f8faf9" stroke="#cad2cd"/>
+  <text x="525" y="266" font-family="Arial" font-size="20" fill="#617178">Neurology</text>
+  <rect x="110" y="320" width="360" height="58" rx="14" fill="#f8faf9" stroke="#cad2cd"/>
+  <text x="135" y="356" font-family="Arial" font-size="20" fill="#617178">kavya.rao@smartclinic.com</text>
+  <rect x="500" y="320" width="360" height="58" rx="14" fill="#f8faf9" stroke="#cad2cd"/>
+  <text x="525" y="356" font-family="Arial" font-size="20" fill="#617178">doctor123</text>
+  <rect x="110" y="430" width="340" height="54" rx="27" fill="#d8f0e6"/>
+  <text x="140" y="464" font-family="Arial" font-size="22" font-weight="700" fill="#095846">Doctor Added Successfully</text>
+</svg>
