@@ -1,49 +1,65 @@
 package com.smartclinic.entity;
 
-import jakarta.persistence.CollectionTable;
-import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Doctor Entity represents a doctor in the Smart Clinic system.
+ * This class is mapped to the "doctors" table in the database.
+ */
 @Entity
 @Table(name = "doctors")
 public class Doctor {
 
+    /**
+     * Unique identifier for each doctor (Primary Key)
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    /**
+     * Name of the doctor
+     */
     @NotBlank
     @Column(nullable = false)
     private String name;
 
+    /**
+     * Specialization of the doctor (e.g., Cardiology, Neurology)
+     */
     @NotBlank
     @Column(nullable = false)
     private String speciality;
 
+    /**
+     * Email of the doctor (must be unique)
+     */
     @Email
     @Column(nullable = false, unique = true)
     private String email;
 
+    /**
+     * Password for authentication
+     */
     @NotBlank
     @Column(nullable = false)
     private String password;
 
+    /**
+     * List of available time slots for the doctor
+     * Stored in a separate table "doctor_available_times"
+     */
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "doctor_available_times", joinColumns = @JoinColumn(name = "doctor_id"))
     @Column(name = "available_time", nullable = false)
     private List<LocalTime> availableTimes = new ArrayList<>();
+
+    // ================= GETTERS & SETTERS =================
 
     public Long getId() {
         return id;
